@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/css3.css" rel="stylesheet">
+    <title>Edit Employee Data</title>
+</head>
+<body>
+    <h1> Edit Your Employee Data</h1>
+    <form method ="post" action ="/LoggedIn/<%= items._id %>?_method=PUT">
+        <label> First Name:</label>
+        <input type="text" name="fname" value="<%= items.fname%>"><br><br>
+        <label> Last Name:</label>
+        <input type="text" name="lname" value="<%= items.lname%>"><br><br>
+        <label>Position:</label>
+        <input type="text" name="job" value="<%= items.job%>"><br><br>
+        <label> Email:</label>
+        <input type="text" name="mail" value="<%= items.email%>"><br><br>
+        <label> Phone Number:</label>
+        <input type="text" name="phone" value="<%= items.number%>"><br><br>
+        <button>Submit</button>
+    </form>
+    <br>
+    <input id="show" type="button" onclick="location.href='/LoggedIn';" value="Go Back">
+</body>
+</html>

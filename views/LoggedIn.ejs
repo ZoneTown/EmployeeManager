@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <link href="/css/css2.css" rel="stylesheet">
+</head>
+<body>
+    <h1><%= topic %></h1>
+    <ul>
+        <form action="/search" method="post">
+            <input id="search" type="text" name="search" placeholder="Search by Last Name">
+            <input type="submit" value="Search">
+        </form>
+        <input id="SignUp" type="button" onclick="location.href='/';" value="Add a Employee" />
+        <% for (let item of items) { %>
+        <div class="box">
+            <li>First: <%= item.fname %> </li> 
+            <li>Last: <%= item.lname %> </li>
+            <li>Position: <%= item.job %> </li> 
+            <li>Email: <%= item.email %> </li> 
+            <li>Phone: <%= item.number %> </li> 
+            <li>
+                <button class="edit"><a href="/LoggedIn/<%= item._id%>/edit">Edit</a></button>
+                <form id="buttons" action="/delete/<%= item._id %>?_method=DELETE"  method="POST">
+                    <button class="delete">Delete</button>
+                </form>
+            </li>
+        </div>
+        <% } %>
+</body>
+</html>

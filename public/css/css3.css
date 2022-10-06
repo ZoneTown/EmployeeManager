@@ -1,0 +1,30 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-image: linear-gradient(#D1D5EE, #FFFFFF) ;
+    height:100vh;
+}
+
+h1{
+    margin-left:39%;
+    margin-right:0%;
+    margin-top:10%;
+}
+
+/* Styles the form and creates a border around it */
+form{
+    border: 5px solid #a5acd9;
+    background-color:#D1D5EE;
+    width:20%;
+    height:auto;
+    margin-left:40%;
+    margin-right:30%;
+    margin-top:5%;
+    padding:10px;    
+}
+#show {
+    text-align: center;
+    margin-left: 48%;
+}
